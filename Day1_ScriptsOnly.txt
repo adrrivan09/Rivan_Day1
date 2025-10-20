@@ -600,6 +600,8 @@ conf t
 
 !@edge
 conf t
+int lo0
+ip nat inside
  int g0/0/0 
   ip nat inside
   exit
@@ -649,7 +651,7 @@ conf t
 
 !@edge
 conf t
- ip name-server 10.32.1.10
+ ip name-server 10.32.1.8
  ip domain lookup
  end
 
@@ -711,6 +713,7 @@ conf t
  !
  no ip route 10.32.0.0 255.255.0.0 172.16.1.32 252
  end
+
 
 
 
